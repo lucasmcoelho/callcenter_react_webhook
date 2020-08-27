@@ -15,6 +15,7 @@ io.on('connection', socket => {
     socket.emit('status', sessions[code]);
 });
 
+
 setInterval(async function () {
     const response = (await axios({
         url: 'https://api.pipedream.com/v1/sources/dc_lVuGLg/event_summaries',
